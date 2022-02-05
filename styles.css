@@ -93,3 +93,15 @@ main {
     justify-content: center;
     margin-top: -5rem;
 }
+
+
+/*transictios-section ===============================*/
+
+.transiction-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 10rem;
+    background-color: var(--dark-blue);
+}
