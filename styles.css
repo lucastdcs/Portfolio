@@ -4,6 +4,7 @@
     --dark-blue: #191E29;
     --dark-green: #004F39;
     --light-green: #01C38D;
+    --light-purple: #B066D1;
 }
 
 * {
@@ -56,11 +57,15 @@ ul {
     font-weight: 700;
 }
 
+li :hover {
+    transform: scale(102%);
+}
+
 ul a:last-child {
     border: 2px solid #01C38D;
     padding: 0.5rem 0.8rem;
     color: #01C38D;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     transition: 0.2s;
 }
 
@@ -82,12 +87,19 @@ p {
     font-size: 36px;
     line-height: 41px;
     letter-spacing: 0.125em;
-    color: #01C38D;
+    background-color: red;
+    background-image: linear-gradient(270deg, #B066D1 29.13%, #01C38D 50%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 main {
     width: 100%;
-    height: 100vh;
+    height: min(900px, 100vh);
     background: radial-gradient(50% 50% at 50% 50%, var(--dark-green) 0%, var(--dark-blue) 100%);
     display: flex;
     flex-direction: column;
@@ -108,16 +120,17 @@ main {
     background-color: var(--dark-blue);
 }
 
+.transiction-section svg {
+    opacity: 0.4;
+}
+
 
 /*about-section ===============================*/
 
 .about {
     background-color: var(--dark-blue);
-    background-image: url('assets/bkgd-gorup.svg');
-    background-repeat: no-repeat;
-    background-position: left bottom;
     width: 100%;
-    height: 700px;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,4 +155,52 @@ main {
 .about svg {
     width: 105%;
     height: 105%;
+}
+
+
+/*about-section ===============================*/
+
+.services {
+    width: 100%;
+    height: 90vh;
+    background-color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.blured-box {
+    width: 540px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(13px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 7px;
+    display: flex;
+    cursor: pointer;
+    transition-duration: 1s;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon {
+    -webkit-filter: drop-shadow( 0px 1px 60px #B066D1);
+    filter: drop-shadow( 0px 1px 106px -33px #B066D1);
+    transition-duration: 0.5s;
+    margin: -3.5rem auto auto auto;
+}
+
+h3 {
+    margin: -10% auto auto auto;
+    font-size: 30px;
+}
+
+.img-animation {
+    margin: -4.5rem auto auto auto;
+    transition-duration: 0.5s;
+}
+
+.expanded {
+    height: 400px;
 }
