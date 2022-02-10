@@ -169,6 +169,24 @@ main {
     justify-content: space-around;
 }
 
+.service-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5rem;
+    letter-spacing: 0.125em;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.7s;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
 .blured-box {
     width: 540px;
     height: 160px;
@@ -182,6 +200,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding: 1rem;
 }
 
 .service-icon {
@@ -192,7 +212,8 @@ main {
 }
 
 h3 {
-    margin: -10% auto auto auto;
+    position: absolute;
+    top: 4rem;
     font-size: 30px;
 }
 
@@ -202,5 +223,5 @@ h3 {
 }
 
 .expanded {
-    height: 400px;
+    height: 20rem;
 }
